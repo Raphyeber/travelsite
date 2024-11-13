@@ -36,7 +36,7 @@ class AdminUserController extends Controller
             'email' => 'required|email:dns|unique:users',
             
             'role' => 'required',
-            'password' => 'required|min:5|max:64',
+            'password' => 'required|min:8|max:16|regex:/[a-z]/|regex:/[A-Z]/|regex:/[0-9]/|regex:/[@$!%*?&]/|regex:/^\S+$/'
         ]);
 
      
